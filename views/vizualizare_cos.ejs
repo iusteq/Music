@@ -1,0 +1,25 @@
+<div class="container"> 
+<div class="bg-image" id="viz">
+<h1>Produsele din cos:</h1>
+
+<div id="pro">
+<% if  (typeof final != 'undefined')  { %>
+        
+        
+    <table>
+        <tr>
+           <th style="text-align:center">Produs   </th> <th> </th> 
+        </tr>
+     
+        
+        <% for (var i in final ) { %>
+         <tr>
+           <td><%= final[i] %></td>
+         </tr>    
+        <% } %>
+     </table>
+    <% } %>  
+
+</div> 
+</div>
+</div>

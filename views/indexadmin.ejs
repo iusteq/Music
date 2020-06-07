@@ -1,0 +1,81 @@
+<div class="container"> 
+    <div class="bg-image img1">
+   
+        <% if  (typeof numeLogat != 'undefined')  { %>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+        <h1>Bine ai venit, <%= numeLogat %> !</h1>
+        <% } else { %>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+         <h1> BINE AI VENIT!</h1>
+        <% } %>  
+    
+<div class="bd">
+    <form action="/creare-bd" method = "get">
+    <button id="b" type="submit"> Creare BD </button>
+    </form>
+    <form action="/stergere-bd" method = "get">
+        <button id="b" type="submit"> Stergere BD </button>
+        </form>
+    <br>
+    <form action="/inserare-bd" method = "post">
+
+
+    <label for="nume">Nume produs:</label>
+    <input type="text" id="nume" name="nume" placeholder="Nume produs" />
+    <br>
+    <label for="id"> id:</label>
+    <input type="text" id="id" name="id" placeholder="Nume id" />
+    <br>
+    <button id="b"> Incarcare BD</button>
+    </form>
+    <br>
+    <form action="/afisare-bd" method = "get">
+    <button id="b" type="submit"> Afisare BD</button>
+   
+    </form>
+    
+    <% if  (typeof json != 'undefined')  { %>
+        
+        
+        <table>
+            <tr>
+               <th style="text-align:center">Nume Produs   </th> <th> </th> 
+            </tr>
+         
+            
+            <% for (var i in json ) { %>
+             <tr>
+               <td><%= json[i].nume %></td>
+              
+               <% if  (typeof numeLogat != 'undefined')  { %>
+                <td>
+                    <form action="/adaugare_cos" method = "post">
+                        
+                        <button id="b" type="submit"> Adauga in cos </button>
+                        
+                        <input type="hidden" name="id" value="<%= json[i].id %>">
+                        </form>
+                    </td>
+                <% } else { %>
+                    <p> </p>
+                    
+                <% } %>  
+                
+
+             </tr>    
+            <% } %>
+         </table>
+        <% } %>  
+
+        
+       
+</div>
+</div>

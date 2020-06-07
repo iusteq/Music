@@ -1,0 +1,12 @@
+<div class="bq-image" id="q">
+<h1>Chestionar</h1>
+<form action="/rezultat-chestionar" method="post">
+    <%for( let i = 0; i < intrebari.length; i++) { %>
+        <p><%- intrebari[i].intrebare %></p>
+        <% for (let j = 0; j <intrebari[i].variante.length; j++) { %>
+            <input type="radio" name="q<%- i %>" value="<%- j %>"/><%- intrebari[i].variante[j] %><br/> 
+        <% } %>
+    <% } %>
+    <input id="b" type="submit" value="Trimite"/>
+</form>
+</div>

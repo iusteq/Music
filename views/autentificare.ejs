@@ -1,0 +1,28 @@
+<div class="container"> 
+   
+<div class="bg-image" id="login">
+  <h1> Autentificare</h1>
+
+
+  <form action="/verificare-autentificare" method="post">
+
+    
+        <label for="utilizator"><b>Utilizator</b></label>
+        <input type="text" placeholder="completati cu nume utilizator" name="utilizator" required>
+        <br>
+        <label for="parola"><b>Parola</b></label>
+        <input type="password" placeholder="completati cu valoare parola" name="parola" required>
+        <br>
+        <button id="b" type="submit">Autentificare</button>
+
+    
+  </form>
+
+  <div id="msgerr">
+  <% if  (typeof mesajEroare != 'undefined')  { %>
+    <p id="mesajEroare"><%= mesajEroare %> !</p>
+    <% } %>  
+        
+  </div>
+</div>
+</div>
