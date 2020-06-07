@@ -1,0 +1,17 @@
+[
+    {
+        "intrebare": "În ce an s-a născut Mozart?",
+        "variante": ["1756", "1820", "1843", "1789"],
+        "corect": 0
+    },
+    {
+        "intrebare": "Cărei trupe îi aparține albumul Abbey Road?",
+        "variante": ["The Beatles", "ABBA", "Pink Floyd", "Queen"],
+        "corect": 0
+    },
+    {
+        "intrebare": "Din ce cauză a murit Ciprian Porumbescu?",
+        "variante": ["Ciroză", "Tuberculoză", "Moarte naturală", "În urmă unei operații"],
+        "corect": 1
+    }
+]
